@@ -39,8 +39,6 @@ Some quick inspiration:
 - https://codepen.io/tvweinstock/pen/wegZEW
 - https://codepen.io/tobiasdev/pen/zzEzVQ
 
-## Project Deadline
-Take your time but try to deliver it within 1 weeks time.
 
 ## How to "Slay" This Assignment: A Checklist
 - Are all requirements set above met?
