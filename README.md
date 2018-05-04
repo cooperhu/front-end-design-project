@@ -21,7 +21,7 @@ Feel free to use NPM for any libraries available and make use of any ES6 feature
 8. **Optional bonus task** Make it responsive using your best judgement.
 9. **Optional bonus task** Host your solution. [Github Pages](https://pages.github.com/) is free and easy to use option! 
 10. **Optional bonus task** Add basic routing – open the overlay based on URL.
-11. **Optional bonus task** Use an free stock Image API for retrieving imagery for the gallery. [Pexels](https://www.pexels.com/api/), [Unsplash](https://unsplash.com/developers) are great options.
+11. **Optional bonus task** Use an free stock Image API for retrieving imagery for the gallery. [Pexels](https://www.pexels.com/api/) and [Unsplash](https://unsplash.com/developers) are great options.
 
 ## Submission
 Please submit either a github repository containing your solution or a zip file. Either method should contain a short document describing your solution, your design decisions and any step necessary to run your submission.
