@@ -8,7 +8,7 @@ See the "imgs" directory for sample images. Feel free to use your own content if
 
 Please demonstrate knowledge of a JS framework of your choosing. We recommend using React or Angular.
 
-Feel free to use NPM for any libraries available and make use of any ES6 features that are available. We also recommend using a CSS preprocessor of your choosing.
+Feel free to use NPM for any libraries available and make use of any ES6 features that are available. 
 
 ## Requirements
 1. Create a grid view of your own design displaying all images viewable in the gallery. 
