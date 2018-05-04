@@ -6,7 +6,7 @@ Create a basic Image Gallery of your own design via HTML/CSS/JS.
 
 See the "imgs" directory for sample images. Feel free to use your own content if you like.
 
-Please demonstrate knowledge of a JS framework of your choosing to do so. We recommend using React or Angular.
+Please demonstrate knowledge of a JS framework of your choosing. We recommend using React or Angular.
 
 Feel free to use NPM for any libraries available and make use of any ES6 features that are available. We also recommend using a CSS preprocessor of your choosing.
 
