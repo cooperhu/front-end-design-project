@@ -2,21 +2,21 @@ Front-end & Design Project
 ======================
 
 ## Project brief
-Create a basic Image Gallery of your own design via HTML/CSS/JS. 
-
-See the "imgs" directory for sample images. Feel free to use your own content if you like.
+Create a basic Image Gallery of your own design via HTML/CSS/JS. Find some sample images to use in your gallery in the "imgs" directory.
 
 Please demonstrate knowledge of a JS framework of your choosing. We recommend using React or Angular.
 
 Feel free to use NPM for any libraries available and make use of any ES6 features that are available. 
 
+Below are the basic requirements for the gallery but feel free to go all out creating features if you like. Feel free to use your own content if you like.
+
 ## Requirements
-1. Create a grid view of your own design displaying all images viewable in the gallery. 
-2. Create a simple custom overlay for viewing a gallery item. 
+1. Create a grid view displaying all images viewable in the gallery. 
+2. Create a simple custom overlay for viewing a single gallery item. 
 3. Clicking a gallery item should launch the overlay.
 4. Include a way for the user to return to the grid view from the overlay.
-5. Add an animated transition between the grid view and overlay.
-6. Add a way for the user to navigate to the previous and next item in the grid from the overlay.
+5. Add a way for the user to navigate to the previous and next item in the grid from the overlay.
+6. Add an animated transition between the grid view and overlay.
 7. **Optional bonus task** Create some hover effect for the image thumbnails.
 8. **Optional bonus task** Make it responsive using your best judgement.
 9. **Optional bonus task** Host your solution. [Github Pages](https://pages.github.com/) is free and easy to use option! 
