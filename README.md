@@ -8,7 +8,7 @@ Please demonstrate knowledge of a JS framework of your choosing. We recommend us
 
 Feel free to use NPM for any libraries available and make use of any ES6 features that are available. 
 
-Below are the basic requirements for the gallery but feel free to go all out creating features if you like. Feel free to use your own content if you like.
+Below are the basic requirements for the gallery but feel free to go all out creating features if you like. Feel free to add any of your own images to the gallery as well.
 
 ## Requirements
 1. Create a grid view displaying all images viewable in the gallery. 
