@@ -47,7 +47,7 @@ Take your time but try to deliver it within 1 weeks time.
 - Is the project submitted via github repository or zip file?
 - Did I write a short document desribing my solution, design decisions and any steps necessary to run?
 - Is the page working without any errors?
-- Is my design intuitive
+- Is my design intuitive?
 - Does my solution showcase my point of view as a designer/developer?
 
 
