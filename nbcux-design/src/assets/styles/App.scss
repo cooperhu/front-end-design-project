@@ -1,0 +1,523 @@
+@import 'partials/_media-queries';
+@import 'partials/fonts';
+
+$black: #000000;
+$white: #ffffff;
+$pink: #f990bf;
+$grey: #888888;
+
+$mdBreak: 768px;
+$lgBreak: 1200px;
+
+body {
+  font-family: 'BrownStd';
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+* { box-sizing: border-box; }
+
+p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 28px;
+  letter-spacing: 0.5px;
+}
+
+a {
+  position: relative;
+  color: $grey;
+  text-decoration: none;
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 0;
+    height: 1px;
+
+    background: $grey;
+
+    transition: width 250ms ease;
+
+    content: '';
+  }
+
+  &:hover {
+    &::before {
+      width: 100%;
+    }
+  }
+}
+
+.clearfix::before,
+.clearfix::after {
+  display: table;
+  content: ' ';
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+.app {
+  text-align: left;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 300;
+
+  width: 100%;
+  padding: 20px 50px;
+
+  text-align: center;
+
+  &__title {
+    display: inline-block;
+
+    margin: 0 0 5px;
+
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+
+    transition: color 250ms ease;
+
+    &.black {
+      color: $black;
+    }
+  }
+
+  &__subline {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+  }
+}
+
+.content-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  @include mq($min-width: $lgBreak) {
+    padding: 0 100px;
+  }
+}
+
+.grid {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+  padding-top: 40px;
+
+}
+
+.grid__item {
+  position: relative;
+
+  width: 100%;
+
+  padding: 40px;
+
+  @include mq($min-width: 400px) {
+    max-width: 50%;
+    float: left;
+
+    &:nth-child(odd) {
+      padding-right: 20px;
+    }
+    &:nth-child(even) {
+      padding-left: 20px;
+    }
+  }
+
+  @include mq($min-width: $mdBreak) {
+    max-width: 25%;
+    float: left;
+
+    &:nth-child(odd) {
+      padding-right: 40px;
+    }
+    &:nth-child(even) {
+      padding-left: 40px;
+    }
+  }
+
+  @include mq($min-width: $lgBreak) {
+    padding: 100px;
+
+    &:nth-child(odd) {
+      padding-right: 100px;
+    }
+    &:nth-child(even) {
+      padding-left: 100px;
+    }
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    padding-bottom: 120%;
+  }
+
+  &--bg {
+    position: absolute;
+    width: calc(100% - 80px);
+    height: calc(100% - 80px);
+
+    cursor: pointer;
+
+    background-position: center center;
+    background-size: cover;
+
+    transition: transform 500ms ease-out;
+
+    @include mq($min-width: 400px) {
+      width: calc(100% - 60px);
+      height: calc(100% - 60px);
+    }
+
+    @include mq($min-width: $mdBreak) {
+      width: calc(100% - 80px);
+      height: calc(100% - 80px);
+      &:hover {
+        filter: sepia(1) hue-rotate(280deg) saturate(1);
+        transform: translate(-5px, -10px);
+      
+      }
+    }
+
+    @include mq($min-width: $lgBreak) {
+      width: calc(100% - 200px);
+      height: calc(100% - 200px);
+    }
+  }
+
+  h1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    display: none;
+
+    margin: 0;
+
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+
+
+.modal img {
+  max-width: 100%;
+}
+
+.modal__overlay.expanded {
+  background: $pink;
+}
+
+$modalFadeSpeed: 750ms;
+
+.modal {
+  position: fixed;
+  top: 0;
+  z-index: 200;
+
+  display: flex;
+
+  width: 100%;
+  overflow-y: hidden;
+
+  height: 100%;
+
+  padding-top: 50px;
+  animation-name: modalReveal;
+  animation-duration: $modalFadeSpeed;
+  animation-iteration-count: 1;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  transition: opacity $modalFadeSpeed ease;
+
+  @include mq($min-width: $mdBreak) {
+    top: 50%;
+    left: 50%;
+
+    max-height: calc(100vh - 120px);
+    padding-top: 0;
+
+    transform: translate(-50%, -50%);
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    width: 100%;
+    height: 100vh;
+
+    background: #ffffff;
+
+    animation-name: modalReveal;
+    animation-duration: $modalFadeSpeed;
+    animation-iteration-count: 1;
+
+    transition: background $modalFadeSpeed ease;
+  }
+
+  &__btn {
+    &--close {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+
+      z-index: 400;
+
+      cursor: pointer;
+
+      transition: color 250ms ease;
+
+      @include mq($min-width: $mdBreak) {
+        right: 40px;
+      }
+
+      &:hover {
+        color: $pink;
+      }
+
+      &.expanded {
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+
+    &--expand {
+      margin-top: 5px;
+      font-size: 12px;
+
+      cursor: pointer;
+
+      transition: opacity 250ms ease, color 250ms ease;
+
+      &:hover {
+        color: $pink;
+      }
+    }
+  }
+
+  &__toggle {
+    &--next,
+    &--prev {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      flex: 1;
+
+      display: none;
+
+      min-width: 50px;
+ 
+    
+      padding: 0 10px;
+
+      text-align: center;
+
+      transition: color 250ms ease;
+
+      div {
+        position: absolute;
+        top: 50%;
+
+        width: 100%;
+      }
+
+      @include mq($min-width: $mdBreak) {
+        display: block;
+        min-width: 75px;
+
+        &:hover {
+          color: $pink;
+        }
+      }
+
+      @include mq($min-width: $lgBreak) {
+        display: block;
+        min-width: 150px;
+      }
+
+      &.mobile {
+        align-self: center;
+        position: fixed;
+        top: 0;
+        z-index: 400;
+
+        display: block;
+
+        width: 50px;
+        height: 100%;
+        line-height: 100vh;
+
+        @include mq($min-width: $mdBreak) {
+          display: none;
+        }
+      }
+    }
+
+    &--next {
+      cursor: url(./assets/img/arrow-right.svg), pointer;
+      &.mobile {
+        @include mq($max-width: $mdBreak) {
+          right: 0;
+        }
+      }
+    }
+    &--prev {
+      cursor: url(./assets/img/arrow-left.svg), pointer;
+      &.mobile {
+        @include mq($max-width: $mdBreak) {
+          left: 0;
+        }
+      }
+    }
+  }
+
+  &__body {
+    width: 100% !important;
+    max-width: 1200px;
+
+    padding: 0 50px;
+
+    @include mq($min-width: 440px) {
+      padding: 0 70px;
+    }
+
+    @include mq($min-width: $mdBreak) {
+      display: flex;
+      padding: 0;
+    }
+
+    &--image {
+      display: flex;
+      flex-direction: column;
+
+      justify-content: center;
+      width: 100%;
+
+      transition: width 500ms ease, height 500ms ease;
+
+      img {
+        display: block;
+
+        max-height: 100%;
+
+        margin: 0 auto;
+
+        &:hover {
+          cursor: zoom-in;
+        }
+      }
+    }
+
+    &--content { 
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      transition: width 500ms ease, opacity 500ms ease;
+
+      @include mq($min-width: $mdBreak) {
+        padding-left: 40px;
+      }
+
+      h1 {
+        margin-bottom: 5px;
+        font-size: 24px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  &.expanded {
+    .modal__btn--expand {
+      opacity: 0;
+    }
+
+    .modal__body--image {
+      height: 100%;
+    }
+
+    .modal__body--image img {
+      cursor: zoom-out;
+    }
+
+    .modal__body--content {
+      width: 0;
+      overflow: hidden;
+      opacity: 0;
+    }
+
+    .modal__toggle--next,
+    .modal__toggle--prev {
+      &:hover,
+      &:active {
+        color: $white;
+      }
+    }
+  }
+}
+
+@keyframes modalReveal {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.footer {
+  position: relative;
+  padding: 20px 0;
+
+  &__headline,
+  &__text {
+    margin: 0 0 5px;
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 16px;
+  }
+
+  &__headline {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      top: -20px;
+      left: 0;
+
+      width: 150px;
+      height: 1px;
+
+      background: $black;
+
+      content: '';
+    }
+  }
+}

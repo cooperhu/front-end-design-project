@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'BrownStd';
+    src: url('./assets/fonts/BrownStd-Light.eot');
+    src: url('./assets/fonts/BrownStd-Light.eot?#iefix') format('embedded-opentype'),
+         url('./assets/fonts/BrownStd-Light.woff2') format('woff2'),
+         url('./assets/fonts/BrownStd-Light.woff') format('woff'),
+         url('./assets/fonts/BrownStd-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'BrownStd';
+    src: url('./assets/fonts/BrownStd-Regular.eot');
+    src: url('./assets/fonts/BrownStd-Regular.eot?#iefix') format('embedded-opentype'),
+         url('./assets/fonts/BrownStd-Regular.woff2') format('woff2'),
+         url('./assets/fonts/BrownStd-Regular.woff') format('woff'),
+         url('./assets/fonts/BrownStd-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
