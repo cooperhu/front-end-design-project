@@ -1,5 +1,9 @@
 Front-end & Design Project
 ======================
+## About the Design
+I decided to utilitize negative space throughout the design to emphasize the content. While the modal expands to reveal annotated information about the image, the user also has the ability to enlarge the image to get a distraction-free view--while still being to navigate to the other items in the grid. I treated the design with a single color, to convey an amiable impression on the user, while still keeping true to the minimal design approach. 
+
+-Connor
 ## Start project
 1. ```cd nbcux-design/```
 2. ```npm install ```
