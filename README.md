@@ -1,5 +1,9 @@
 Front-end & Design Project
 ======================
+## Start project
+```cd /nbcux-design/```
+```npm install ```
+```npm start```
 
 ## Project brief
 Create a basic Image Gallery of your own design via HTML/CSS/JS. Find some sample images to use in your gallery in the "imgs" directory.
