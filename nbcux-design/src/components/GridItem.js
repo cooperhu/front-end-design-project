@@ -15,7 +15,6 @@ class GridItem extends Component {
     return (
     	<div className={`grid__item`} onClick={this.props.onClick}>
 	      <img src={this.props.filepath} alt={this.props.title}/>
-	      <h1>{this.props.title}</h1>
     	</div>
 		)
   }*/

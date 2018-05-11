@@ -51,7 +51,6 @@ class Grid extends Component {
         <div className="grid__container clearfix">
           {GalleryItems.imgObjects.map((image, i) => 
             <GridItem filepath={image.path} 
-                      title={image.title} 
                       onClick={(e) => this.openModal(i)}
                       itemIndex={i} 
                       key={`grid-item_${i}`}/>
