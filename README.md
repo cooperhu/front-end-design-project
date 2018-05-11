@@ -1,7 +1,7 @@
 Front-end & Design Project
 ======================
 ## Start project
-1. ```cd /nbcux-design/```
+1. ```cd nbcux-design/```
 2. ```npm install ```
 3. ```npm start```
 
