@@ -220,11 +220,6 @@ a {
   }
 }
 
-
-.modal img {
-  max-width: 100%;
-}
-
 .modal__overlay.expanded {
   background: $pink;
 }
@@ -247,6 +242,7 @@ $modalFadeSpeed: 750ms;
   animation-name: modalReveal;
   animation-duration: $modalFadeSpeed;
   animation-iteration-count: 1;
+
   overflow-x: hidden;
   overflow-y: scroll;
 
@@ -256,7 +252,7 @@ $modalFadeSpeed: 750ms;
     top: 50%;
     left: 50%;
 
-    max-height: calc(100vh - 120px);
+    max-height: calc(100vh - 160px);
     padding-top: 0;
 
     transform: translate(-50%, -50%);
@@ -312,6 +308,8 @@ $modalFadeSpeed: 750ms;
       font-size: 12px;
 
       cursor: pointer;
+
+      text-align: center;
 
       transition: opacity 250ms ease, color 250ms ease;
 
@@ -426,7 +424,8 @@ $modalFadeSpeed: 750ms;
       img {
         display: block;
 
-        max-height: 100%;
+        max-width: 100%;
+        max-height: 95%;
 
         margin: 0 auto;
 
